@@ -17,7 +17,6 @@
 
 $(function() { 
   // Fix input element click problem
-  function update() {
   $('.dropdown-menu input').click(function(e) {
     e.stopPropagation();
   });
@@ -36,7 +35,6 @@ $(function() {
     else
       $(this.children[0]).toggleClass('icon-check-empty icon-check');
   });
-  }
 
 
 
@@ -45,7 +43,13 @@ $(function() {
     e.preventDefault();
     var value = $(this).parent().find('input').val();
     var id = $(this).parent().parent().attr("id");
-    $("#"+id+" .divider").before('<li><a href=""><i class="icon-check-empty"></i>'+value+'</a></li>');
-    update();
+    var newItem = $('<li><a href=""><i class="icon-check-empty"></i> '+value+'</a></li>')
+    newItem.children(0).click(function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(this.children[0]).toggleClass('icon-check-empty icon-check');
+    });
+    $("#"+id+" .divider").before(newItem);
+    
   });
 });
