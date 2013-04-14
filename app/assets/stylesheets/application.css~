@@ -12,3 +12,12 @@
  *= require_tree .
  *= require bootstrap_and_overrides
  */
+
+.tags {
+height:20px;
+margin-bottom:5px;
+}
+
+.tags span {
+margin-right:10px;
+}
