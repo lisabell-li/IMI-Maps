@@ -23,7 +23,7 @@ Choose...
 		<li><a href=""><i class="icon-check-empty"></i> Mobile Development</a></li>
 		<li><a href=""><i class="icon-check-empty"></i> Game Development</a></li>
 		<li class="divider"></li>
-		<li><p class="btn pull-left plus-btn" style="margin-left:10px;"><i class="icon-plus"></i></p><input type="text" placeholder="Other" style="margin-left:10px;margin-right:10px;"></input></li>
+		<li><p class="btn pull-left" style="margin-left:10px;"><i class="icon-plus"></i></p><input type="text" placeholder="Other" style="margin-left:10px;margin-right:10px;"></input></li>
 	    </ul>
 	</div>
   </div>
@@ -42,7 +42,7 @@ Choose...
 		<li><a href=""><i class="icon-check-empty"></i> Ruby</a></li>
 		<li><a href=""><i class="icon-check-empty"></i> Python</a></li>
 		<li class="divider"></li>
-		<li><p class="btn pull-left plus-btn" style="margin-left:10px;"><i class="icon-plus"></i></p><input type="text" placeholder="Other" style="margin-left:10px;margin-right:10px;"></input></li>
+		<li><p class="btn pull-left" style="margin-left:10px;"><i class="icon-plus"></i></p><input type="text" placeholder="Other" style="margin-left:10px;margin-right:10px;"></input></li>
 	    </ul>
 	</div>
   </div>

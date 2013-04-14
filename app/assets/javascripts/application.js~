@@ -48,6 +48,4 @@ $(function() {
     $("#"+id+" .divider").before('<li><a href=""><i class="icon-check-empty"></i>'+value+'</a></li>');
     update();
   });
-
-  update();
 });
