@@ -23,17 +23,28 @@ $(function() {
   $('.dropdown-menu a').click(function(e) {
     e.stopPropagation();
     e.preventDefault();
+    var id = $(this).parent().parent().attr("id");       
+    var value = $(this).parent().find('a')[0].innerText;
     if ($(this).parent().parent().attr("id")=="salary-menu") {  
       $(this).parent().parent().children().children().each(function () {
-	console.log($(this).children(0).hasClass('icon-check-empty')); 
-	if ($(this).children(0).hasClass('icon-check-empty')==false)
-	  $(this).children(0).toggleClass('icon-check-empty');
-	})                
+				if ($(this).children(0).hasClass('icon-check-empty')==false) {
+					$(this).children(0).toggleClass('icon-check-empty');
+				}
+			})                
       $(this.children[0]).removeClass('icon-check-empty');
       $(this.children[0]).addClass('icon-check');
+			$("#"+id.substring(0,id.length-4)+"tags").html("");
+			$("#"+id.substring(0,id.length-4)+"tags").append('<span class="label label-success"><i class="icon-tag"></i> '+value+'</span>');
     }
-    else
+    else{
+      if ( $(this.children[0]).hasClass('icon-check-empty')) { 
+				$("#"+id.substring(0,id.length-4)+"tags").append('<span class="label label-success"><i class="icon-tag"></i> '+value+'</span>');
+			}
+			else {
+				$("#"+id.substring(0,id.length-4)+"tags").find(":contains('"+value+"')").remove();			
+			}
       $(this.children[0]).toggleClass('icon-check-empty icon-check');
+		}
   });
 
 
@@ -47,6 +58,12 @@ $(function() {
     newItem.children(0).click(function(e) {
     e.stopPropagation();
     e.preventDefault();
+	  if ( $(this.children[0]).hasClass('icon-check-empty')) { 
+				$("#"+id.substring(0,id.length-4)+"tags").append('<span class="label label-success"><i class="icon-tag"></i> '+value+'</span>');
+		}
+		else {
+			$("#"+id.substring(0,id.length-4)+"tags").find(":contains('"+value+"')").remove();			
+		}
     $(this.children[0]).toggleClass('icon-check-empty icon-check');
     });
     $("#"+id+" .divider").before(newItem);

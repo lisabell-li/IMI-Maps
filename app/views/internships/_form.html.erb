@@ -12,11 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :orientation %><br />
+    <%= f.label :orientation %>
+    <div id="orientation-tags"></div>
+    <br />
     <div class="btn-group">
-	    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-Choose...
-		<span class="caret"></span>
+	    <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+			Choose...
+			<span class="caret"></span>
 	    </a>
 	    <ul class="dropdown-menu" id="orientation-menu">
 		<li><a href=""><i class="icon-check-empty"></i> Web Development</a></li>
@@ -29,11 +31,13 @@ Choose...
   </div>
 </br>
   <div class="field">
-    <%= f.label :programming_language %><br />
-	<div class="btn-group">
-	    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-Choose...
-		<span class="caret"></span>
+    <%= f.label :programming_language %>
+    <div id="language-tags"></div>
+    <br />
+		<div class="btn-group">
+	    <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+			Choose...
+			<span class="caret"></span>
 	    </a>
 	    <ul class="dropdown-menu" id="language-menu">
 		<li><a href=""><i class="icon-check-empty"></i> C++</a></li>
@@ -48,9 +52,11 @@ Choose...
   </div>
 </br>
   <div class="field">
-    <%= f.label :salary %><br />
+    <%= f.label :salary %>
+    <div id="salary-tags"></div>
+    <br />
     <div class="btn-group">
-	    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+	    <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
 Choose...
 		<span class="caret"></span>
 	    </a>
