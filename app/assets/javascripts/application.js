@@ -16,6 +16,9 @@
 //= require twitter/bootstrap
 
 $(function() { 
+
+	$('.selectpicker').selectpicker();
+
   // Fix input element click problem
   $('.dropdown-menu input').click(function(e) {
     e.stopPropagation();

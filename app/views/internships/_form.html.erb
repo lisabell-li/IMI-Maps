@@ -15,6 +15,7 @@
     <%= f.label :orientation %>
     <div id="orientation-tags" class="tags"></div>
     <div class="btn-group">
+		<!---<%= f.select(:orientation, ['Item 1', 'Item 2'], {}, { :class => 'selectpicker', :'data-style' => "btn-success" } ) %> --->
 	    <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
 			Choose...
 			<span class="caret"></span>
@@ -51,7 +52,8 @@
 </br>
   <div class="field">
     <%= f.label :salary %>
-    <div id="salary-tags" class="tags"></div>
+    <div id="salary-tags" class="tags">
+    </div>
     <div class="btn-group">
 			<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
 			Choose...
@@ -76,7 +78,7 @@
     <%= f.text_field :living_costs %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-large btn-success" %>
   </div>
 <% end %>
 
